@@ -8,9 +8,9 @@ SRC_DIR = srcs
 OBJ_DIR = objs
 
 SRCS = main.cpp \
-							HumanA.cpp \
-							HumanB.cpp \
-							Weapon.cpp \
+	HumanA.cpp \
+	HumanB.cpp \
+	Weapon.cpp \
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 

@@ -8,7 +8,7 @@ SRC_DIR = srcs
 OBJ_DIR = objs
 
 SRCS = main.cpp \
-							Harl.cpp
+	Harl.cpp
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 

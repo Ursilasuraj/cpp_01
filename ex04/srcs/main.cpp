@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 12:04:38 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/05/18 16:12:43 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/07/08 12:11:49 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,24 +27,27 @@ void replaceString(std::string &line, const std::string &s1, const std::string &
 		}
 	}
 }
-std::ifstream openInputFile(const std::string &filename)
+
+bool openInputFile(std::ifstream &inputFile, const std::string &filename)
 {
-	std::ifstream inputFile(filename);
+	inputFile.open(filename.c_str());
 	if(!inputFile.is_open())
 	{
 		std::cerr << "Error could not open file!" << std::endl;
+		return false;
 	}
-	return inputFile;
+	return true;
 }
 
-std::ofstream openOutputFile(const std::string &filename)
+bool openOutputFile(std::ofstream &outputFile, const std::string &filename)
 {
-	std::ofstream outputFile(filename + ".replace");
+	outputFile.open((filename + ".replace").c_str());
 	if(!outputFile.is_open())
 	{
 		std::cerr << "Error could not open file!" << std::endl;
+		return false;
 	}
-	return outputFile;
+	return true;
 }
 
 int main(int argc, char *argv[])
@@ -58,11 +61,11 @@ int main(int argc, char *argv[])
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
 	
-	std::ifstream inputFile = openInputFile(filename);
-	if(!inputFile.is_open())
+	std::ifstream inputFile;
+	if(!openInputFile(inputFile, filename))
 		return (1);
-	std::ofstream outputFile = openOutputFile(filename);
-	if(!outputFile.is_open()) 
+	std::ofstream outputFile;
+	if(!openOutputFile(outputFile, filename)) 
 	{
 		inputFile.close();
 		return (1);

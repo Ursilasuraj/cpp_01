@@ -1,18 +1,23 @@
-#Compiled object files
-*.o
-*.obj
-
 # Executables
-*.exe 
 zombie
+harl
+*.exe
+*render*
+memory_zombies
 
-# Directories
+# Build directories
 objs/
-.DS_Store
+bin/
+build/
 
-# IDE files
+# IDE / OS files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.DS_Store
+
+# Build files
+*.o
+*.out

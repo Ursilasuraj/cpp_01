@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 12:31:09 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/05/17 07:10:46 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/07/08 11:33:29 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Zombie::Zombie() : name(""){
 }
-	//Default constructor -initializes name to empty string
 
+//Default constructor -initializes name to empty string
 Zombie::Zombie(const std::string &zombieName) : name (zombieName){
 }
 
