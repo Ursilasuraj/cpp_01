@@ -2,7 +2,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I includes
 
-NAME = zombie
+NAME = moar_brainz
 
 SRC_DIR = srcs
 OBJ_DIR = objs

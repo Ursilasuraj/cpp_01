@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 08:21:17 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/05/17 09:30:59 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/07/14 15:26:14 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int main()
 	std::cout << mystring << "\n";
 	std::cout << *stringPTR << "\n";
 	std::cout << stringREF << "\n";
-	
+
 	return 0;
 }
